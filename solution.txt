@@ -1,2 +1,23 @@
-Please add your pseudocode to this file
-And a written explanation of your solution
+FUNCTION consecutiveSubstrings(inputString)
+    // Create a container to hold all found substrings
+    INITIALIZE results AS an empty list
+
+    // Iterate through the string to set the starting boundary
+    FOR start_index FROM 0 TO (length of inputString - 1) DO
+        
+        // Iterate from the start boundary to the end of the string
+        FOR end_index FROM (start_index + 1) TO (length of inputString) DO
+            
+            // Extract the segment between the start and end boundaries
+            SET current_substring = copy of characters from inputString 
+                                    between start_index and end_index
+            
+            // Store the segment in our results list
+            ADD current_substring TO results
+            
+        END FOR
+    END FOR
+
+    // Return the completed list to the user
+    RETURN results
+END FUNCTION
